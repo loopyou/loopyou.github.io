@@ -40,10 +40,9 @@ const urlParams = new URLSearchParams(window.location.search);
 const TARGET_URL = urlParams.get('url');
 const stayTime = urlParams.get('stayTime') || 1
 const maxFrame = urlParams.get('maxFrame') || 3
-document.getElementById("url").value = "Johnny Bravo";
-document.getElementById("stayTime").value = "Johnny Bravo";
-document.getElementById("maxFrame").value = "Johnny Bravo";
-
+document.getElementById("url").value = TARGET_URL;
+document.getElementById("stayTime").value = stayTime;
+document.getElementById("maxFrame").value = maxFrame;
 
 const updateAndShowCount = (msg) => {
   document.getElementById("msg").innerHTML = msg;
