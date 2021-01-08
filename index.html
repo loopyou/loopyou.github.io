@@ -27,7 +27,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const TARGET_URL = urlParams.get('url');
 const stayTime = urlParams.get('stayTime') || 1
-const MAX_COUNT = 3
+const maxFrame = urlParams.get('maxFrame') || 3
 const updateAndShowCount = (msg) => {
   document.getElementById("msg").innerHTML = msg;
 }
@@ -70,7 +70,7 @@ window.onload = async function () {
     while (true) {
         await sleep(stayTime)
 
-        if(count >=MAX_COUNT) {
+        if(count >=maxFrame) {
             removeAllIFrame()
             count = 0 
             continue
